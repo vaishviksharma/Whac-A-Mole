@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze</title>
+  <link rel="stylesheet" href="Maze.css">
+</head>
+<body>
+  
+  <div id="page">
+
+    <div id="title">
+      <marquee><h2>Red "Maze" Room</h2></marquee>
+    </div>
+
+    <div id="tm">
+      <h5>J.A.R.V.I.S A.&trade;</h5>
+    </div>
+
+    <div id="Message-Container">
+      <div id="message">
+        <h1>Congratulations!</h1>
+        <p>You are safe.</p> 
+        <p id="moves"></p>
+        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
+      </div>
+    </div>
+
+    <br>
+    <div id="menu">
+      <div class="custom-select">
+        <select id="diffSelect">
+                  <option value="10">Easy</option>
+                  <option value="15">Medium</option>
+                  <option value="30">Hard</option>
+                  <option value="45">Extreme</option>
+                  <option value="65">God</option>                                      
+              </select>
+      </div>
+      <audio id="audioPlayer"  loop >
+        <source src="HorrorMusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element. 
+      </audio>
+      
+      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+      
+    </div>
+
+    <div id="view">
+      <div id="mazeContainer">
+        <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
+    <h3><p id="instructions">Choose the mode and click Start<br><br>Use arrow keys or 'WASD' keys to move the key to the room!</p></h3>
+
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+  
+  <script src="Maze.js"></script>
+</body>
+</html>
